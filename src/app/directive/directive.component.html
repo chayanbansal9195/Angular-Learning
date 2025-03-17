@@ -1,0 +1,26 @@
+<p>directive works!</p>
+
+<h3 *ngIf="show">Component Directive</h3>
+<button (click)="toggleShow()">ToggleShow</button>
+
+<h1>NgFor NgIf Directive Structural</h1>
+<ul>
+    <li *ngFor="let user of users">
+        {{user}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let student of students">
+        {{student.name}}
+        {{student.class}}
+        {{student.email}}
+    </li>
+</ul>
+
+<div *ngIf="login; else elseCheck">
+    <a href="">login</a>
+</div>
+<ng-template #elseCheck>
+    <a href="">logout</a>
+</ng-template>

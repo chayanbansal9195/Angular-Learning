@@ -1,0 +1,21 @@
+<h1>Get & Set Input Field Value By Event and Template</h1>
+<br>
+<br>
+<h1>User Name is: {{displayName}}</h1>
+<br>
+<br>
+<input type="text" value="{{name}}" (input)="getName($event)" placeholder="Enter User name by event">
+<br>
+<br>
+<button (click)="showName()">Get Value</button>
+<br>
+<button (click)="setName()">Set Value</button>
+
+<br>
+<br>
+NameRef: {{displayNameRef}}
+<br>
+<br>
+<input type="text" value="{{nameRef}}" (input)="getNameRef(nameRefField.value)" placeholder="Enter name by template reference" #nameRefField>
+<button (click)="showNameRef()" >Get Name</button>
+<button (click)="setNameRef()">Set Name</button>

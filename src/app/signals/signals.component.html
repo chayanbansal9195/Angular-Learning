@@ -1,0 +1,29 @@
+<hr>
+<h1>{{x}}</h1>
+<h2>{{count()}}</h2>
+
+<button (click)="count.set(100)">count</button>
+<button (click)="x=100">prop</button>
+<button (click)="updateValue('inc')">Effect Incre</button>
+<button (click)="updateValue('dec')">Effect Decre</button>
+<br><hr>
+<button (click)="count.set(count()+1)">Direct Incre</button>
+<button (click)="count.set(count()-1)">Direct Decre</button>
+<hr>
+<br>
+<h4>{{data()}}</h4>
+<button (click)="updateData()">Data type change</button>
+<br>
+<hr>
+<h4>Computed - {{computeVal()}}</h4>
+
+<h1>Effect usage</h1>
+<h4>{{userName()}}</h4>
+<button (click)="userName.set('john')">Effect</button>
+<hr>
+<br>
+<h4>{{countVal()}}</h4>
+<button (click)="toggleDisplay()">Update</button>
+@if(displayHeading()){
+  <h1 style="background-color: green;">Page {{countVal()}}</h1>  
+}

@@ -1,0 +1,6 @@
+<h1>dynamic-style works!</h1>
+
+<h3 [style.backgroundColor]="bgcolor" [style.fontSize.pt]="fontSize">Dynamic Style</h3>
+
+<h3 [style.fontSize.px]="zoom ? headingBig:headingSmall">Toggle check</h3>
+<button (click)="toggleButton()">Toggle zoom</button>
