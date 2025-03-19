@@ -1,0 +1,9 @@
+<p>basic-reactive-form works!</p>
+<form action="" method="post">
+    <input type="text" placeholder="enter name" [formControl]="name">
+    <br>
+    <input type="text" placeholder="password" [formControl] = "password">
+    <button type="button" (click)="getValue()">login</button>
+    <button type="button" (click)="setValue()">Set Value</button>
+    <h3>{{name.value}}</h3>
+</form>

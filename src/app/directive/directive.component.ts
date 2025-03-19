@@ -1,9 +1,9 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directive',
-  imports: [NgIf, NgFor],
+  imports: [NgIf, NgFor,NgSwitch,NgSwitchCase,NgSwitchDefault],
   templateUrl: './directive.component.html',
   styleUrl: './directive.component.css',
 })
@@ -11,6 +11,9 @@ export class DirectiveComponent {
   show = true;
   users = ['asa', 'cxv', 'qwer', 'uiytu'];
   login=false
+  colors=["red","green","yellow","purple"]
+  color=""
+  i=0
   students = [
     {
       name: 'asa',
@@ -36,5 +39,15 @@ export class DirectiveComponent {
 
   toggleShow() {
     this.show = !this.show;
+  }
+
+  toggleColor(){
+    this.color=this.colors[this.i]
+    this.i++
+    if(this.i>this.colors.length)
+      this.i=0
+    console.log(this.i);
+    
+
   }
 }

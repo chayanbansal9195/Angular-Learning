@@ -1,0 +1,40 @@
+<div class="header">
+  <h1>Logo</h1>
+  <ul>
+    <li>
+      <a
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+        >Home Events</a
+      >
+    </li>
+    <li>
+      <a routerLinkActive="active" routerLink="/twoWayBind">Two Way Bind</a>
+    </li>
+    <li>
+      <a routerLinkActive="active" routerLink="/directive">Directive</a>
+    </li>
+    <li>
+      <a routerLinkActive="active" [routerLink]="['profile', { name: 'Peter' }]"
+        >Profile</a
+      >
+    </li>
+    <!-- using click -->
+    <li>
+      <button (click)="goToProfile('Chayan Click')">Profile Click</button>
+    </li>
+    <!-- using common data in path link  -->
+    <li>
+      <a routerLinkActive="active" routerLink="profile">Profile Common Data</a>
+    </li>
+    <!-- dynamic routing -->
+     <h4>User Dynamic Route</h4>
+     @for(user of users;track user.id){
+      <li>
+      <a routerLinkActive="active" routerLink="user/{{user.id}}/{{user.name}}">{{user.name}}</a>
+    </li>
+     }
+    
+  </ul>
+</div>

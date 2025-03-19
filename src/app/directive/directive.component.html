@@ -24,3 +24,14 @@
 <ng-template #elseCheck>
     <a href="">logout</a>
 </ng-template>
+
+<h1>ngSwitch Directive</h1>
+<div [ngSwitch]="color">
+    <div [style.backgroundColor]="color" *ngSwitchCase="'red'">red</div>
+    <div [style.backgroundColor]="color" *ngSwitchCase="'green'">green</div>
+    <div [style.backgroundColor]="color" *ngSwitchCase="'blue'">blue</div>
+    <div [style.backgroundColor]="color" *ngSwitchCase="'yellow'">yellow</div>
+    <div [style.backgroundColor]="color" *ngSwitchCase="'purple'">purple</div>
+    <div *ngSwitchDefault>No Color</div>
+</div>
+<button (click)="toggleColor()">toggle switch</button>

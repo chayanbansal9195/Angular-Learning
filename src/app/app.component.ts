@@ -13,6 +13,9 @@ import { TwoWayBindComponent } from './two-way-bind/two-way-bind.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { DynamicStyleComponent } from './dynamic-style/dynamic-style.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { HeaderComponent } from './header/header.component';
+import { BasicReactiveFormComponent } from './basic-reactive-form/basic-reactive-form.component';
+import { FormGroupReactiveComponent } from './form-group-reactive/form-group-reactive.component';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +32,11 @@ import { DirectiveComponent } from './directive/directive.component';
     TwoWayBindComponent,
     ToDoListComponent,
     DynamicStyleComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    HeaderComponent,
+    RouterOutlet,
+    BasicReactiveFormComponent,
+    FormGroupReactiveComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
