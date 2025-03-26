@@ -1,0 +1,67 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "students": [
+    {
+      "id": "6e9",
+      "name": "asa",
+      "class": 1,
+      "email": "asa@gmail.com"
+    },
+    {
+      "id": "6e0",
+      "name": "asaasd",
+      "class": 1234,
+      "email": "asa@gmail.com"
+    },
+    {
+      "id": "6e",
+      "name": "asas",
+      "class": 1423,
+      "email": "asa@gmail.com"
+    },
+    {
+      "id": "6e345",
+      "name": "asaf",
+      "class": 124,
+      "email": "asa@gmail.com"
+    },
+    {
+      "name": "dasd",
+      "class": "32144444",
+      "email": "fasfdfyyyy",
+      "id": "511f"
+    },
+    {
+      "id": "dca4"
+    },
+    {
+      "id": "4a85"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<h1>rest-service works!</h1>
+
+@for(product of productList;track product){
+    <ul>
+        <li>{{product.title}}</li>
+        <li>{{product.price}}</li>
+        <li><img src="{{product.thumbnail}}" alt=""></li>
+    </ul>
+}

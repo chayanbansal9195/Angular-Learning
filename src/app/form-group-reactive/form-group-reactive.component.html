@@ -1,1 +1,19 @@
-<p>form-group-reactive works!</p>
+<h1>Form Group Reactive with Validation</h1>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="name" formControlName="name">
+    <span *ngIf="name1?.hasError('required')">Name is required</span>
+    <span class="error" *ngIf="name1?.invalid && (name1?.dirty||name1?.touched)">Name is required</span>
+    <br>
+    <input type="text" placeholder="password" formControlName="password">
+    <span *ngIf="pass1?.hasError('required')">Name is required</span>
+    <span class="error" *ngIf="pass1?.invalid && (pass1?.dirty||pass1?.touched)">Password is required</span>
+    <br>
+    <input type="text" placeholder="email" formControlName="email">
+    <span *ngIf="email1?.hasError('required')">Name is required</span>
+    <span class="error" *ngIf="email1?.invalid && (email1?.dirty||name1?.touched)">Email is required</span>
+    <br>
+    <button>Submit</button>
+    <button type="button" (click)="setValue()">Set Value</button>
+    <br>
+    <h3>{{name}}--{{email}}--{{password}}</h3>
+</form>

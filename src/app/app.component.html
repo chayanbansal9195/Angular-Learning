@@ -1,43 +1,101 @@
 <h1>coding</h1>
-<h2>{{title}}</h2>
-<h3>{{name}}</h3>
+<h2>{{ title }}</h2>
+<h3>{{ name }}</h3>
 <app-login></app-login>
 <app-customComponent></app-customComponent>
 
 <button (click)="handleClickEvent()">Click me</button>
 
 <app-counter></app-counter>
-<hr>
+<hr />
 <app-events></app-events>
 <app-getsetvalue></app-getsetvalue>
-<br><hr>
+<br />
+<hr />
 <app-if-else></app-if-else>
 <app-else-if></app-else-if>
 <app-for-loop></app-for-loop>
-<br>
+<br />
 <app-signals></app-signals>
-<br>
-<hr>
+<br />
+<hr />
 <app-two-way-bind></app-two-way-bind>
-<br>
-<hr>
+<br />
+<hr />
 <app-to-do-list></app-to-do-list>
-<br>
-<hr>
+<br />
+<hr />
 <app-dynamic-style></app-dynamic-style>
-<br>
-<hr>
+<br />
+<hr />
 <app-directive></app-directive>
-<br>
-<hr>
+<br />
+<hr />
 <h1>Routing</h1>
 <app-header></app-header>
-<br>
-<hr>
+<br />
+<hr />
 <app-basic-reactive-form></app-basic-reactive-form>
-<br>
-<br>
-<hr>
+<br />
+<br />
+<hr />
 <app-form-group-reactive></app-form-group-reactive>
+<hr />
+<br />
+<br />
+<app-template-driven-form></app-template-driven-form>
+<hr />
+<br /><br />
+<!-- <app-pass-data-parent-child [parentName]="parentName"></app-pass-data-parent-child> -->
+<app-pass-data-parent-child
+  [parentName]="selectedUser.value"
+  city="city"
+></app-pass-data-parent-child>
+<select #selectedUser>
+  <option value="abc">abc</option>
+  <option value="ghk">ghk</option>
+</select>
+<br />
+<br />
+<hr />
+@for(user of users;track user){
+<app-reuse [user]="user"></app-reuse>
+}
+<hr />
+<br />
+<br />
+<app-pass-data-child-parent
+  (getUsers)="handleUsers($event)"
+></app-pass-data-child-parent>
+@for(user of childUsers;track user){
+<p>{{ user }}</p>
+}
 
-<router-outlet/>
+<hr />
+<br /><br />
+<app-pipes></app-pipes>
+<br />
+<br />
+<hr />
+<h1>Lifecysle counter destroy</h1>
+<button (click)="changeCounter()">counter</button>
+<div *ngIf="counter != 5"><app-life-cycle [counter]="counter" #lifecycle></app-life-cycle></div>
+
+<!-- service file -->
+ <button (click)="getProductData()">Product Data</button>
+ <div>
+  <ul>
+    <li *ngFor="let item of productData">{{item.name}} {{item.mobile}}</li>
+  </ul>
+  @for (item of productData; track item) {
+    <p>{{item.mobile}}</p>
+  }
+ </div>
+ <app-rest-service></app-rest-service>
+ <app-json-service></app-json-service>
+
+ <!-- laz loading -->
+  <br><br><hr>
+  <a routerLinkActive="active" routerLink="/lazyLoading">Lazy Loading</a>
+
+<router-outlet />

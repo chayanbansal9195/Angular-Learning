@@ -1,0 +1,28 @@
+<h1>json-service works!</h1>
+
+<form #studentForm="ngForm" (ngSubmit)="addStudent(studentForm.value)">
+    <input type="text" name="name" placeholder="enter name" [ngModel]="selectedStudent?.name">
+    <br><br>
+    <input type="text" name="class" placeholder="enter class" [ngModel]="selectedStudent?.class">
+    <br><br>
+    <input type="text" name="email" placeholder="enter email" [ngModel]="selectedStudent?.email">
+    <br><br>
+    @if(!selectedStudent){
+        <button>Add</button>
+    }@else {
+        <button>Update</button>
+    }
+    
+
+</form>
+
+@for(student of students; track student.name){
+    <ul>
+        <li>{{student.name}}</li>
+        <li>{{student.class}}</li>
+        <li><button (click)="deleteStudent(student.id)">Delete</button></li>
+        <li><button (click)="selectStudent(student.id)">Update</button></li>
+    </ul>
+}
+
+

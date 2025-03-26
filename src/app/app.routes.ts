@@ -5,6 +5,7 @@ import { EventsComponent } from './events/events.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserComponent } from './user/user.component';
+import { LazyLodingComponent } from './lazy-loding/lazy-loding.component';
 
 export const routes: Routes = [
   {
@@ -34,6 +35,12 @@ export const routes: Routes = [
     path:'user/:id/:name',
     component:UserComponent
   },
+  // lazy loading
+  // {
+  //   path:'lazyLoading',
+  //   component:LazyLodingComponent
+  // },
+  {path:'lazyLoading',loadComponent:()=>import('./lazy-loding/lazy-loding.component').then((c)=>c.LazyLodingComponent)},
   // 404 page route
   {
     path:'**',
